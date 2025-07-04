@@ -44,7 +44,15 @@ export function UserDetailsForm({open, setOpen}: Readonly<Props>) {
       collage: userDetails?.collage ?? "",
     },
   })
-  React.useLayoutEffect(()=>{},[userDetails])
+  React.useEffect(() => {
+    form.reset({
+      rollno: userDetails?.rollno ?? "",
+      program: userDetails?.program ?? "",
+      course: userDetails?.course ?? "",
+      collage: userDetails?.collage ?? "",
+    });
+  }, [userDetails]); // Reset when contactDetails change
+  
 
   function onSubmit(values: z.infer<typeof userDetailsUpdate>) {
     postUserDetails(accessjwt,values).then(str=>{

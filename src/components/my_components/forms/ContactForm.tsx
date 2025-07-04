@@ -46,7 +46,16 @@ export function ContactForm({open, setOpen}: Readonly<Props>) {
       linkedin: contactDetails?.linkedin ?? ""
     },
   })
-  React.useLayoutEffect(()=>{},[contactDetails])
+  React.useEffect(() => {
+    form.reset({
+      phone: contactDetails?.phone ?? "",
+      email: contactDetails?.email ?? "",
+      student_email: contactDetails?.student_email ?? "",
+      github: contactDetails?.github ?? "",
+      linkedin: contactDetails?.linkedin ?? ""
+    });
+  }, [contactDetails]); // Reset when contactDetails change
+  
 
   function onSubmit(values: z.infer<typeof contactUpdate>) {
     // Do something with the form values.

@@ -59,7 +59,7 @@ const userStore=(set:any,get:any)=>({
       const dat=response.data;
       set({is_loading:false,refreshjwt:dat.tokens.refresh,accessjwt:dat.tokens.access,name:dat.user.name,email:dat.user.email})
       return response.data.message;
-    } catch (error) {
+    } catch (error:any) {
       //(error)
       set(initialState)
       set({is_loading:false})
@@ -75,7 +75,7 @@ const userStore=(set:any,get:any)=>({
       const dat=response.data;
       set({is_loading:false,refreshjwt:dat.tokens.refresh,accessjwt:dat.tokens.access,name:dat.user.name,email:dat.user.email})
       return response.data.message;
-    } catch (error) {
+    } catch (error:any) {
       //(error)
       set(initialState)
       set({is_loading:false})

@@ -55,6 +55,7 @@ export function EducationForm({ open, setOpen, education }: Readonly<Props>) {
     postEducation(accessjwt, values).then((str) => {
       toast(str);
       setOpen(false);
+      form.reset();
     });
   }
 

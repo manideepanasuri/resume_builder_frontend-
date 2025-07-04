@@ -57,6 +57,7 @@ export function ProjectsForm({ open, setOpen, project }: Readonly<Props>) {
     postProjects(accessjwt, values).then((str) => {
       toast(str);
       setOpen(false);
+      form.reset();
     });
   }
 

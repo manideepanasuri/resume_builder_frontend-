@@ -54,6 +54,7 @@ export function PositionForm({ open, setOpen, position }: Readonly<Props>) {
     postPositions(accessjwt, values).then((str) => {
       toast(str);
       setOpen(false);
+      form.reset();
     });
   }
 

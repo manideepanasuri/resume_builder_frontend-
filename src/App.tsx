@@ -9,7 +9,7 @@ import NotAuthenticated from "./components/redirects/NotAuthenticated"
 import { useEffect } from "react"
 import userAuthStore from "./store/userstore"
 import Signup from "./pages/Signup"
-import { Footer } from "./components/ui/footer"
+import PrivacyPolicy from "./pages/PrivacyPolicyExtension"
 
 
 function App() {
@@ -25,6 +25,8 @@ function App() {
       <Route path="/login" element={<NotAuthenticated><Login/></NotAuthenticated>} />
       <Route path="/signup" element={<NotAuthenticated><Signup/></NotAuthenticated>} />
       <Route path="/" element={<Authenticated><Homepage/></Authenticated>}/>
+      <Route path="/privacy-policy-extension" element={<PrivacyPolicy/>}/>
+
     </Routes>
     <Toaster />
     </ThemeProvider>

@@ -55,6 +55,7 @@ export function AchivementsForm({open, setOpen,achivement}: Readonly<Props>) {
     postAchivements(accessjwt,values).then(str=>{
       toast(str)
       setOpen(false);
+      form.reset();
     })
   }
 

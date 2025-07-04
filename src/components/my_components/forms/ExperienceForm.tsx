@@ -9,9 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {
   Experiences2,
-  experienceUpdate,
-  Project2,
-  projectsUpdate,
+  experienceUpdate
 } from "@/types/general";
 import { z } from "zod";
 import AllDetailsStore from "@/store/userDetailsStore";

@@ -1,0 +1,14 @@
+services:
+  resumebuilderfrontend:
+    build:
+      context: D:/Acadamics/hackathon/resumebuilder/frontend1/
+    image: resumebuilderfrontend
+    container_name: containerresumebuilderfrontend
+    restart: always
+    expose:
+      - "3000"
+    networks:
+      - shared
+networks:
+  shared:
+    external: true
