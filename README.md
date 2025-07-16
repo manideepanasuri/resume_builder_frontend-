@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# 📄 Resume Builder with Overleaf Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a smart **Resume Builder** that lets users fill in their details on a beautiful UI and instantly get a clean, professional **LaTeX resume**. With the help of a Chrome Extension, users can **paste the generated LaTeX directly into Overleaf**, making resume editing and exporting seamless.
 
-Currently, two official plugins are available:
+> ✨ Built to simplify resume creation using **LaTeX**, with a focus on clean formatting and developer-friendly export.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔗 Live Website
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉 [Resume Builder Website](https://resume.manideepanasuri.shop)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
+## 🔗 Backend Repo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+👉 [Resume Builder Backend](https://github.com/manideepanasuri/resume_builder_backend)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🧩 Chrome Extension
+
+🔗 [Chrome Extension Repository](https://chromewebstore.google.com/detail/resume-builder-extension/akkliaeildieknhppapkbgefbehbdcpj)
+
+The extension allows pasting LaTeX directly into the Overleaf editor with one click after generation.
+
+---
+
+## 📹 Walkthrough Video
+
+[![Watch on YouTube]()
+
+> 🎥 Click the thumbnail or [watch on YouTube]() for a complete walkthrough.
+
+---
+
+## 🚀 How It Works
+
+1. ✍️ User enters personal, education, experience, and skills data into the web form.
+2. 🧠 The backend converts the data into a clean LaTeX resume template.
+3. 📋 User can preview or copy the LaTeX code.
+4. 🧩 Chrome Extension detects Overleaf editor and pastes the code inside it automatically.
+
+---
+
+## ✨ Features
+
+- 🎯 Easy-to-use form to input resume sections
+- 📄 Generates LaTeX code on the fly
+- 👨‍💻 Clean and customizable LaTeX templates
+- 🧩 Chrome Extension for Overleaf integration
+- 🌐 Works directly inside the browser — no downloads needed
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React + TypeScript + TailwindCSS + ShadCN UI
+
+### Backend
+- Django REST Framework
+- LaTeX code generation via templates
+- JWT-based optional authentication
+
+### Extension
+- Chrome Extension with content scripts to detect Overleaf
+- Injects LaTeX code into Overleaf's code editor
+
