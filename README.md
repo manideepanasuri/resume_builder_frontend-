@@ -27,9 +27,7 @@ The extension allows pasting LaTeX directly into the Overleaf editor with one cl
 
 ## 📹 Walkthrough Video
 
-[![Watch on YouTube]()
-
-> 🎥 Click the thumbnail or [watch on YouTube]() for a complete walkthrough.
+> 🎥 Click the thumbnail or [watch on YouTube](https://youtu.be/ZwocK5w2uU4) for a complete walkthrough.
 
 ---
 
